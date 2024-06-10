@@ -76,7 +76,7 @@ features = ["doc-only"]
 
 [dependencies]
 rust_tokenizers = "8.1.1"
-tch = "0.15.0"
+tch = "0.16.0"
 serde_json = "1"
 serde = { version = "1", features = ["derive"] }
 ordered-float = "3"
@@ -91,6 +91,9 @@ lazy_static = { version = "1", optional = true }
 ort = {version="~1.15.2", optional = true, default-features = false, features = ["half"]}
 ndarray = {version="0.15", optional = true}
 tokenizers = {version="0.15", optional=true, default-features = false, features = ["onig"]}
+
+[patch.crates-io]
+torch-sys = { git = 'https://github.com/LaurentMazare/tch-rs', rev = 'a90854b', version = "0.16.0"}
 
 [dev-dependencies]
 anyhow = "1"
